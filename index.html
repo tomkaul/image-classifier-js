@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'/>
+    <title>Simple Image Classifier</title>
+    <link rel='stylesheet' href='styles.css'/>
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+</head>
+  <body>
+    <div class='menu-container'>
+      <div class='menu'>
+        <div class='date'>Aug 29, 2019</div>
+        <div class='signup'>Thomas Kaulberg, Denmark</div>
+      </div>
+    </div>
+    <div class='photo-grid-container'>
+      <div class='photo-grid'>
+        <div class='photo-grid-item first-item'>
+          <h1>Simple Image Classifier</h1>
+        </div>
+        <div class='photo-grid-item'>
+          <div id="console"></div>
+          <!-- Open Web cam for capturing pictures -->
+          <div class='img'>
+            <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+          </div>
+        </div>
+        <div class='photo-grid-item'>
+          <div class='content'>
+            <button id="class-a">Add A</button>
+            <button id="class-b">Add B</button>
+            <button id="class-c">Add C</button>
+            <button id="class-d">Do Nothing</button>
+          </div>
+        </div>
+        <div class='photo-grid-item last-item'>
+          <h2>Guideline</h2>
+
+          <h3>Training the model</h3>
+
+          <ol>
+            <li>Put an object in front of the WebCam and Press Button A</li>
+            <li>Move the object a bit and Press Button A again</li>
+            <li>Repeat 10-15 times</li>
+            <li>Put another object in front of the WebCam and Press Button B</li>
+            <li>Move the object a bit and Press Button B again</li>
+            <li>Repeat 10-15 times</li>
+            <li>Do the same for Button C with a third object</li>
+          </ol>
+
+          <h3>Testing the trained model</h3>
+
+          <p> Move the 3 objects used during training in front of the camera and observe if the model predicts correctly
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Load index.js after the content of the page -->
+    <script src="index.js"></script>
+  </body>
+</html>
